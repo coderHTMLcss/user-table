@@ -1,0 +1,90 @@
+.wrapper {
+  max-height: 575px;
+  overflow-y: scroll;
+}
+
+.table {
+  width: 100%;
+  min-height: max-content;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.tableHeader {
+  background-color: #55608f;
+
+  @media screen and (max-width: 768px) {
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    border: none;
+  }
+}
+
+.tableHeaderRow {
+  border-bottom: 1px solid #ddd;
+  color: #fff;
+}
+
+.tableHeaderCell {
+  padding: 15px;
+  text-align: start;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tableBodyRow {
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media screen and (max-width: 768px) {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 10px;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.tableBodyCell {
+  padding: 15px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 300;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #000;
+  position: relative;
+
+  @media screen and (max-width: 768px) {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: right;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:before {
+      content: attr(data-label);
+      float: left;
+      font-size: inherit;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #55608f;
+    }
+
+    &:hover {
+      background-color: rgb(144, 159, 139);
+      color: #fff;
+    }
+  }
+}

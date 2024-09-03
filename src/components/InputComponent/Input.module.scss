@@ -1,0 +1,26 @@
+.label {
+  padding: 3px;
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
+
+  .input {
+    width: 100%;
+    padding: 3px 5px;
+    outline: transparent;
+    border: none;
+
+    &:focus {
+      outline: 2px solid #000;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 3px;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+  }
+  &:last-child .input {
+    margin-bottom: 0px;
+  }
+}

@@ -1,0 +1,16 @@
+.filter {
+  padding: 15px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #55608f;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .filter {
+    width: 100%;
+    display: block;
+  }
+}
